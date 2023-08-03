@@ -85,7 +85,7 @@
                 </tr>
             </table>
         </div>
-        <div class="dash-body" style="margin-top: 15px">
+        <div class="dash-body" style="margin-top: 15px;margin: bottom 20px;padding-bottom: 10px;">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;" >
                         
                         <tr >
@@ -144,6 +144,30 @@
         
         
                         </tr>
+                        
+
+                        <tr>
+                            
+                    <td colspan="4" >
+                        
+                    <center>
+                    <table class="filter-container doctor-header" style="border: none;width:95%;" border="0" >
+                    <tr>
+                        <td >
+                            <h3>Welcome!</h3>
+                            <h1>Administrator</h1>
+                            <p>Thanks for joinnig with us. We are always trying to get you a complete service<br>
+                            You can view your dailly schedule, Reach Patients Appointment at home!<br><br>
+                            </p>
+                          
+                            <br>
+                        </td>
+                    </tr>
+                                    </table>
+                                    </tr>
+
+
+
                 <tr>
                     <td colspan="4">
                         

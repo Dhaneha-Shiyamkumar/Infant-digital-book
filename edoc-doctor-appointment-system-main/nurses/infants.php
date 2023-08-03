@@ -17,7 +17,45 @@
             animation: transitionIn-Y-bottom 0.5s;
         }
 </style>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+
+      title:{
+      text: "Infant Height Information"
+      },
+       data: [
+      {
+        type: "line",
+
+        dataPoints: [
+        // { x: $age, y: $height },
+        { x: new Date(2012, 01, 1), y: 414 },
+        { x: new Date(2012, 02, 1), y: 520 },
+        { x: new Date(2012, 03, 1), y: 460 },
+        { x: new Date(2012, 04, 1), y: 450 },
+        { x: new Date(2012, 05, 1), y: 500 },
+        { x: new Date(2012, 06, 1), y: 480 },
+        { x: new Date(2012, 07, 1), y: 480 },
+        { x: new Date(2012, 08, 1), y: 410 },
+        { x: new Date(2012, 09, 1), y: 500 },
+        { x: new Date(2012, 10, 1), y: 480 },
+        { x: new Date(2012, 11, 1), y: 510 }
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+
 </head>
+
 <body>
     <?php
 
@@ -48,6 +86,8 @@
     //echo $userid;
     //echo $username;
     ?>
+
+
     <div class="container">
     <div class="menu">
             <table class="menu-container" border="0">
@@ -89,7 +129,7 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient menu-active menu-icon-patient-active">
-                        <a href="infants.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">My Patients</p></a></div>
+                        <a href="infants.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">All infants</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
@@ -325,7 +365,13 @@
             $tele=$row["ptel"];
             $dob=$row["pdob"];
 
-
+            $sqlmain1= "SELECT graphsdata.id,graphsdata.Age,graphsdata.Height, graphsdata.Weight from graphsdata INNER JOIN patient ON graphsdata.id=patient.pid;";
+            $result1= $database->query($sqlmain1);
+            $row1=$result1->fetch_assoc();
+            $age=$row["age"];
+            $height=$row["height"];
+            $weight=$row["weight"];
+            
          
             echo '
             <div id="popup1" class="overlay">
@@ -335,6 +381,7 @@
                         <a class="close" href="infants.php">&times;</a>
                         <div class="content">
                             Infant Digital Book<br>
+                            
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
@@ -346,6 +393,9 @@
                                 </td>
                             </tr>
                             
+                            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
@@ -390,10 +440,6 @@
                                 '.$dob.'<br><br>
                                 </td>
                             </tr>
-                           
-                           
-                          
-                          
                            
                             <tr>
                                 <td colspan="2">
@@ -732,6 +778,8 @@
 
 
 </div>
+
+
 
 </body>
 </html>

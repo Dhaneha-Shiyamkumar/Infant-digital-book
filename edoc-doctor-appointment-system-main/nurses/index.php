@@ -98,7 +98,7 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient">
-                        <a href="infants.php" class="non-style-link-menu"><div><p class="menu-text">My Patients</p></a></div>
+                        <a href="infants.php" class="non-style-link-menu"><div><p class="menu-text">All infants</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
@@ -152,7 +152,7 @@
                     <td colspan="4" >
                         
                     <center>
-                    <table class="filter-container doctor-header" style="border: none;width:95%" border="0" >
+                    <table class="filter-container doctor-header" style="border: none;width:95%;" border="0" >
                     <tr>
                         <td >
                             <h3>Welcome!</h3>
@@ -160,7 +160,7 @@
                             <p>Thanks for joinnig with us. We are always trying to get you a complete service<br>
                             You can view your dailly schedule, Reach Patients Appointment at home!<br><br>
                             </p>
-                            <a href="appointment.php" class="non-style-link"><button class="btn-primary btn" style="width:30%">View My Appointments</button></a>
+                            <a href="https://www.echannelling.com/" class="non-style-link"><button class="btn-primary btn" style="width:30%">View Appointment Page</button></a>
                             <br>
                             <br>
                         </td>
@@ -189,19 +189,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
-                                                        <div>
-                                                                <div class="h1-dashboard">
-                                                                    <?php    echo $doctorrow->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard">
-                                                                    All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                </div>
-                                                        </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
-                                                    </div>
-                                                </td>
+                                               
                                                 <td style="width: 25%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
@@ -209,44 +197,14 @@
                                                                     <?php    echo $patientrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    Total Infants &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 </tr>
-                                                <tr>
-                                                <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
-                                                        <div>
-                                                                <div class="h1-dashboard" >
-                                                                    <?php    echo $appointmentrow ->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard" >
-                                                                    NewBooking &nbsp;&nbsp;
-                                                                </div>
-                                                        </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
-                                                    </div>
-                                                    
-                                                </td>
-
-                                                <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:21px;padding-bottom:21px;">
-                                                        <div>
-                                                                <div class="h1-dashboard">
-                                                                    <?php    echo $schedulerow ->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard" style="font-size: 15px">
-                                                                    Today Sessions
-                                                                </div>
-                                                        </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/session-iceblue.svg');"></div>
-                                                    </div>
-                                                </td>
-                                                
-                                            </tr>
+                                               
                                         </table>
                                     </center>
 
